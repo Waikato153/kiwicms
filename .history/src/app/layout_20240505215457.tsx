@@ -25,13 +25,13 @@ export default function RootLayout({
       <body id="body" className={inter.className}>
 
         <NavLinks>
-          <div>just for test1</div>
+          <div>just for test</div>
         </NavLinks>
-   
-        <>
-        {team}
-        {/* {analytics} */}
-        </>
+        <div>
+
+          {team}
+        
+        </div>
         <main>
           {children}
         </main>

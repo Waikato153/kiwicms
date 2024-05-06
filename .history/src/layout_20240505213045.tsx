@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { NavLinks } from './components/nav-links'
-import Page from "./settings/page";
+import {NavLinks} from './app/components/nav-links'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,23 +17,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode,
   team: React.ReactNode,
-  analytics: React.ReactNode
+  analytics: React.ReactNode 
 }>) {
   return (
     <html lang="en">
       <body id="body" className={inter.className}>
-
-        <NavLinks>
-          <div>just for test1</div>
-        </NavLinks>
-   
-        <>
-        {team}
-        {/* {analytics} */}
-        </>
-        <main>
-          {children}
-        </main>
+        
+      <NavLinks>
+        <div>just for test</div>
+      </NavLinks>
+     
+        <main>{children}</main>
+        <main>{team}</main>
+        <main>{analytics}</main>
       </body>
     </html>
   );

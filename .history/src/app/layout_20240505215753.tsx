@@ -30,7 +30,7 @@ export default function RootLayout({
    
         <>
         {team}
-        {/* {analytics} */}
+        {analytics}
         </>
         <main>
           {children}

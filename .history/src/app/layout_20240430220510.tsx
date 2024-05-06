@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { NavLinks } from './components/nav-links'
-import Page from "./settings/page";
+import NavLinks from './components/nav-links'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,28 +12,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  team,
-  analytics
 }: Readonly<{
-  children: React.ReactNode,
-  team: React.ReactNode,
-  analytics: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body id="body" className={inter.className}>
-
-        <NavLinks>
-          <div>just for test1</div>
-        </NavLinks>
-   
-        <>
-        {team}
-        {/* {analytics} */}
-        </>
-        <main>
-          {children}
-        </main>
+        <NavLinks />
+        <main>{children}</main>
       </body>
     </html>
   );

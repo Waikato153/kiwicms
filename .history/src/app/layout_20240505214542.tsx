@@ -12,26 +12,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-  team,
-  analytics
+  children
 }: Readonly<{
   children: React.ReactNode,
-  team: React.ReactNode,
-  analytics: React.ReactNode
 }>) {
   return (
     <html lang="en">
       <body id="body" className={inter.className}>
 
         <NavLinks>
-          <div>just for test1</div>
+          <div>just for test</div>
         </NavLinks>
-   
-        <>
-        {team}
-        {/* {analytics} */}
-        </>
+
         <main>
           {children}
         </main>
